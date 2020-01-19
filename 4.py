@@ -9,5 +9,6 @@ def is_palindrome(number: int):
 
 
 multiples = ([a, b] for a, b in product(range(100, 999), repeat=2) if is_palindrome(a * b))
-maxPair = max(multiples, key=lambda pair: pair[0] * pair[1])
-print(f"Largest palindrome: {maxPair[0] * maxPair[1]}")
+max_pair = max(multiples, key=lambda pair: pair[0] * pair[1])
+
+print(f"Largest palindrome: {max_pair[0] * max_pair[1]}")
