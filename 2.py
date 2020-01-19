@@ -9,5 +9,5 @@ def fibonacci(a=0, b=1, max=4000000):
         yield b
 
 
-fibSum = sum(fib for fib in fibonacci() if not fib % 2)
-print(f"Sum: {fibSum}")
+fib_sum = sum(fib for fib in fibonacci() if not fib % 2)
+print(f"Sum: {fib_sum}")
