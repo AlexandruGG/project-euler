@@ -5,7 +5,7 @@
 from typing import List
 
 with open('11-matrix.txt', 'r') as file:
-    matrix = [list(map(int, line.split(' '))) for line in file]
+    matrix: List[List[int]] = [list(map(int, line.split(' '))) for line in file]
 
 maxProduct = 1
 
