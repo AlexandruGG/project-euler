@@ -8,8 +8,8 @@ def get_first_n_digits(n: int, x: int) -> int:
 
 
 with open('13-numbers.txt', 'r') as file:
-    numbersList: List[int] = [int(line) for line in file]
+    numbers_list: List[int] = [int(line) for line in file]
 
-numbers_sum = sum(numbersList)
+numbers_sum = sum(numbers_list)
 
 print(f"First ten digits: {get_first_n_digits(10, numbers_sum)}")

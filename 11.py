@@ -7,7 +7,7 @@ from typing import List
 with open('11-matrix.txt', 'r') as file:
     matrix: List[List[int]] = [list(map(int, line.split(' '))) for line in file]
 
-maxProduct = 1
+max_product = 1
 
 for i in range(16):
     for j in range(16):
@@ -16,6 +16,6 @@ for i in range(16):
         backslash_prod = matrix[i][j] * matrix[i+1][j+1] * matrix[i+2][j+2] * matrix[i+3][j+3]
         slash_prod = matrix[19-i][j] * matrix[18-i][j+1] * matrix[17-i][j+2] * matrix[16-i][j+3]
 
-        maxProduct = max([maxProduct, vertical_prod, horizontal_prod, backslash_prod, slash_prod])  
+        max_product = max([max_product, vertical_prod, horizontal_prod, backslash_prod, slash_prod])  
 
-print(f"Greatest product of four adjacent matrix numbers: {maxProduct}")
+print(f"Greatest product of four adjacent matrix numbers: {max_product}")
